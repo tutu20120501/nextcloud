@@ -1,4 +1,4 @@
-## wonderfall/nextcloud
+## tutu20150501/nextcloud
 
 
 [![](https://images.microbadger.com/badges/version/wonderfall/nextcloud.svg)](http://microbadger.com/images/wonderfall/nextcloud "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/wonderfall/nextcloud.svg)](http://microbadger.com/images/wonderfall/nextcloud "Get your own image badge on microbadger.com")
@@ -6,33 +6,30 @@
 **Made for my own use. Irregular updates! This image is eventually intended as a base for your own Docker image. I cannot be responsible if you're using outdated Docker images.**
 
 ### Features
-- Based on Alpine Linux.
-- Bundled with nginx and PHP 7.4 (wonderfall/nginx-php image).
-- Automatic installation using environment variables.
-- Package integrity (SHA512) and authenticity (PGP) checked during building process.
-- Data and apps persistence.
-- OPCache (opcocde), APCu (local) installed and configured.
-- system cron task running.
-- MySQL, PostgreSQL (server not built-in) and sqlite3 support.
-- Redis, FTP, SMB, LDAP, IMAP support.
-- GNU Libiconv for php iconv extension (avoiding errors with some apps).
-- No root processes. Never.
-- Environment variables provided (see below).
+- Alpine Linux 系统.
+- nginx and PHP 7.4 (tutu20120501/nginx-php image).
+- 使用环境变量自动安装.
+- 编译过程进行安装包SHA512和PGP完整性校验.
+- 数据和app可持久化.
+- OPCache (opcocde)和APCu (local)默认支持.
+- cron系统任务.
+- 支持MySQL, PostgreSQL (未内置)和 sqlite3.
+- 支持Redis, FTP, SMB, LDAP, IMAP.
+- php采用GNU Libiconv扩展(避免某些app错误).
+- 无root进程.
+- 提供环境变量.
 
-### Tags
-- **latest** : latest stable version.
-- **19.0** : latest 18.0.x version (stable)
-- **18.0** : latest 17.0.x version (oldstable, please migrate!)
+### 标签
+- **latest** : 最新稳定版.
+- **19.0** : 19.0.x 最新稳定版
 
-Since this project should suit my needs, I'll only maintain the latest stable version available.
-
-### Build-time variables
-- **NEXTCLOUD_VERSION** : version of nextcloud
+### 编译变量
+- **NEXTCLOUD_VERSION** : nextcloud版本
 - **GPG_nextcloud** : signing key fingerprint
 
-### Environment variables
-- **UID** : nextcloud user id *(default : 991)*
-- **GID** : nextcloud group id *(default : 991)*
+### 环境变量
+- **UID** : nextcloud user id *(默认值: 1024)*
+- **GID** : nextcloud group id *(默认值: 101)*
 - **UPLOAD_MAX_SIZE** : maximum upload size *(default : 10G)*
 - **APC_SHM_SIZE** : apc memory size *(default : 128M)*
 - **OPCACHE_MEM_SIZE** : opcache memory size in megabytes *(default : 128)*
@@ -43,7 +40,7 @@ Since this project should suit my needs, I'll only maintain the latest stable ve
 - **ADMIN_USER** : username of the admin account *(default : none, web configuration)*
 - **ADMIN_PASSWORD** : password of the admin account *(default : none, web configuration)*
 - **DOMAIN** : domain to use during the setup *(default : localhost)*
-- **DB_TYPE** : database type (sqlite3, mysql or pgsql) *(default : sqlite3)*
+- **DB_TYPE** : database type (sqlite3, mysql or pgsql) *(default : mysql)*
 - **DB_NAME** : name of database *(default : none)*
 - **DB_USER** : username for database *(default : none)*
 - **DB_PASSWORD** : password for database user *(default : none)*
