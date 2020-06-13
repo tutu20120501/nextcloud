@@ -1,11 +1,6 @@
 ## tutu20150501/nextcloud
 
-
-[![](https://images.microbadger.com/badges/version/wonderfall/nextcloud.svg)](http://microbadger.com/images/wonderfall/nextcloud "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/wonderfall/nextcloud.svg)](http://microbadger.com/images/wonderfall/nextcloud "Get your own image badge on microbadger.com")
-
-**Made for my own use. Irregular updates! This image is eventually intended as a base for your own Docker image. I cannot be responsible if you're using outdated Docker images.**
-
-### Features
+### 功能
 - Alpine Linux 系统.
 - nginx and PHP 7.4 (tutu20120501/nginx-php image).
 - 使用环境变量自动安装.
